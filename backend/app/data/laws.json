@@ -1,0 +1,13 @@
+[
+  {
+    "keywords": ["deposit", "rent", "landlord"],
+    "issue": "Security Deposit Dispute",
+    "law": "Landlords are expected to return deposit after deductions...",
+    "steps": [
+      "Send a written notice",
+      "Contact local authority",
+      "File complaint"
+    ],
+    "risk": "Medium"
+  }
+]
