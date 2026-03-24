@@ -3,13 +3,16 @@ import google.generativeai as genai
 from groq import Groq
 from app.core.config import GEMINI_API_KEY, GROQ_API_KEY
 
+import traceback
+
 def call_gemini(prompt: str):
     """
     Primary AI call using Google Gemini 1.5 Flash.
     Returns a parsed JSON dictionary or None on failure.
     """
-    if not GEMINI_API_KEY:
-        print("Gemini API Key missing.")
+    print(f"DEBUG: Gemini Key used: {GEMINI_API_KEY[:5]}...")
+    if not GEMINI_API_KEY or "your_gemini_api_key_here" in GEMINI_API_KEY:
+        print("Gemini API Key missing or placeholder.")
         return None
         
     try:
@@ -22,14 +25,19 @@ def call_gemini(prompt: str):
             generation_config={"response_mime_type": "application/json"}
         )
         
+        if not response.text:
+            print("Gemini returned empty response.")
+            return None
+            
         return json.loads(response.text)
     except Exception as e:
-        print(f"Gemini API Error: {e}")
+        print(f"##### GEMINI ERROR #####")
+        traceback.print_exc()
         return None
 
 def call_groq(prompt: str):
     """
-    Fallback AI call using Groq (Llama 3 70B).
+    Fallback AI call using Groq (Llama 3.3 70B).
     Returns a parsed JSON dictionary or None on failure.
     """
     if not GROQ_API_KEY:
@@ -41,12 +49,17 @@ def call_groq(prompt: str):
         
         # Groq also supports a native JSON mode.
         completion = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+            model="llama-3.3-70b-versatile",
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"}
         )
         
+        if not completion.choices[0].message.content:
+            print("Groq returned empty response.")
+            return None
+            
         return json.loads(completion.choices[0].message.content)
     except Exception as e:
-        print(f"Groq API Error: {e}")
+        print(f"##### GROQ ERROR #####")
+        traceback.print_exc()
         return None

@@ -62,14 +62,15 @@ def process_query(query: str):
         # Stamp the response with the model that actually provided the answer
         response["model_used"] = model_name
         return response
-    
-    # Final safety fallback if both AI models fail
+        
+    # If all AI services fail, return a structured error response
     return {
         "issue": "AI Service Temporarily Unavailable",
         "law": "N/A",
-        "steps": ["Please try again in a few minutes.", "Check your internet connection."],
+        "steps": ["Please try again in a few moments."],
         "risk": "N/A",
-        "advice": "The legal assistant is currently offline. We apologize for the inconvenience.",
-        "disclaimer": "AI services are unreachable.",
-        "model_used": "Failed"
+        "advice": "The legal assistant is experiencing high traffic. Your query is important to us.",
+        "is_legal": False,
+        "model_used": "Failed",
+        "disclaimer": "N/A - Service Unavailable"
     }
