@@ -1,13 +1,112 @@
 [
   {
-    "keywords": ["deposit", "rent", "landlord"],
-    "issue": "Security Deposit Dispute",
-    "law": "Landlords are expected to return deposit after deductions...",
+    "keywords": ["deposit", "rent", "landlord", "security deposit"],
+    "issue": "Security Deposit Recovery",
+    "law": "Model Tenancy Act (MTA), 2021 & Local Rent Control Acts. The landlord must return the security deposit within one month of the tenant vacating the premises, after making necessary deductions for repairs or unpaid dues.",
     "steps": [
-      "Send a written notice",
-      "Contact local authority",
-      "File complaint"
+      "Gather evidence: rent receipts, photographs of the house, and the original agreement.",
+      "Send a formal legal notice for the recovery of the security deposit through an advocate.",
+      "If not resolved, file a petition before the Rent Authority/Controller under the Model Tenancy Act."
     ],
-    "risk": "Medium"
+    "risk": "Moderate - Usually resolved via legal notice, but may take 6-12 months if it goes to the Rent Court."
+  },
+  {
+    "keywords": ["consumer", "refund", "e-commerce", "defective", "flipkart", "amazon"],
+    "issue": "Defective Product/E-commerce Refund",
+    "law": "Consumer Protection Act, 2019. Consumers have the right to be protected against the marketing of goods which are hazardous to life and property, and the right to seek redressal against unfair trade practices.",
+    "steps": [
+      "File a formal complaint on the National Consumer Helpline (NCH) portal.",
+      "Send a formal notice to the seller and the e-commerce platform.",
+      "If the value is below ₹50 Lakhs, file a case in the District Consumer Disputes Redressal Commission (DCDRC)."
+    ],
+    "risk": "Low - High success rate in consumer courts; no advocate mandatory for the consumer."
+  },
+  {
+    "keywords": ["salary", "unpaid", "employer", "labor", "termination"],
+    "issue": "Unpaid Salary or Wrongful Termination",
+    "law": "Payment of Wages Act, 1936 and Industrial Disputes Act, 1947. Employers are legally bound to pay wages by the 7th or 10th of each month. Termination without notice or 'just cause' is challengeable.",
+    "steps": [
+      "Send a formal request for dues via email/registered post.",
+      "Approach the local Labor Commissioner's office for mediation.",
+      "File a recovery suit in a Labor Court if the dispute remains unresolved."
+    ],
+    "risk": "Moderate - Labor laws favor employees, but the process can be slow (1-2 years)."
+  },
+  {
+    "keywords": ["cyber", "fraud", "phishing", "online", "scam", "bank"],
+    "issue": "Cyber Financial Fraud",
+    "law": "Information Technology Act, 2000 & RBI Guidelines on Limiting Liability. If a fraud is reported within 3 days, the customer's liability is zero; if reported within 4-7 days, it's limited to ₹5,000 to ₹25,000.",
+    "steps": [
+      "Immediately call the National Cyber Crime Helpline at 1930.",
+      "Report the transaction to your bank to freeze the account/card.",
+      "File a formal complaint on 'cybercrime.gov.in' and visit the local Cyber Police Station."
+    ],
+    "risk": "High - Recovery depends on how quickly the incident is reported (the 'Golden Hour')."
+  },
+  {
+    "keywords": ["fir", "police", "complaint", "refusal", "zero fir"],
+    "issue": "Police Refusal to Register FIR",
+    "law": "Section 154(3) and 156(3) of the CrPC (now Section 173 and 175 of BNSS). If an officer-in-charge refuses to register an FIR, the complainant can send the substance of the information to the Superintendent of Police (SP).",
+    "steps": [
+      "Submit a written complaint to the Superintendent of Police (SP) via registered post.",
+      "File an application before a Judicial Magistrate under Section 156(3) of CrPC to order the police to investigate.",
+      "Request a 'Zero FIR' if the crime occurred in a different jurisdiction."
+    ],
+    "risk": "High - Requires persistent legal follow-up with the SP or the Court."
+  },
+  {
+    "keywords": ["property", "ancestral", "inheritance", "partition"],
+    "issue": "Ancestral Property Claim",
+    "law": "Hindu Succession (Amendment) Act, 2005. Daughters have equal rights as sons in coparcenary (ancestral) property by birth, regardless of whether the father was alive in 2005.",
+    "steps": [
+      "Obtain the family tree (Genealogical Table) and title deeds of the property.",
+      "Send a legal notice for partition to the other co-owners.",
+      "File a Suit for Partition in the Civil Court of the jurisdiction where the property is located."
+    ],
+    "risk": "Very High - Property suits in India can take 5-15 years to reach finality."
+  },
+  {
+    "keywords": ["divorce", "mutual", "alimony", "maintenance"],
+    "issue": "Mutual Consent Divorce",
+    "law": "Section 13B of the Hindu Marriage Act, 1955. Both parties must live separately for at least one year and agree that the marriage should be dissolved.",
+    "steps": [
+      "Draft a joint petition outlining terms of alimony, child custody, and asset division.",
+      "File the petition in the Family Court (First Motion).",
+      "Re-appear after a 6-month 'cooling-off' period (can be waived) for the Second Motion and Final Decree."
+    ],
+    "risk": "Low - The fastest and most dignified way to end a marriage in India."
+  },
+  {
+    "keywords": ["cheque", "bounce", "138", "ni act", "payment"],
+    "issue": "Cheque Bounce (Dishonour)",
+    "law": "Section 138 of the Negotiable Instruments Act, 1881. It is a criminal offence punishable by imprisonment of up to 2 years or a fine of up to twice the cheque amount.",
+    "steps": [
+      "Send a formal 'Demand Notice' to the drawer within 30 days of receiving the 'Return Memo' from the bank.",
+      "If no payment is made within 15 days of the notice, file a criminal complaint in the Magistrate Court within the next 30 days.",
+      "Provide the original cheque, return memo, and acknowledgment of the demand notice as evidence."
+    ],
+    "risk": "Moderate - Strong legal tool, but courts are heavily burdened with 138 cases."
+  },
+  {
+    "keywords": ["maternity", "leave", "pregnancy", "benefits"],
+    "issue": "Maternity Benefit Refusal",
+    "law": "Maternity Benefit (Amendment) Act, 2017. Female employees in any establishment with 10 or more people are entitled to 26 weeks of paid maternity leave.",
+    "steps": [
+      "Request the benefit in writing to the HR department at least 10 weeks before expected delivery.",
+      "If refused, file a complaint with the Inspector under the Maternity Benefit Act.",
+      "The Inspector can direct the employer to pay and also impose a penalty."
+    ],
+    "risk": "Low - The law is very strict and clearly in favor of the employee."
+  },
+  {
+    "keywords": ["negligence", "doctor", "hospital", "medical"],
+    "issue": "Medical Negligence",
+    "law": "Consumer Protection Act & Indian Penal Code (Section 304A). Doctors are liable for negligence if they fail to provide the standard of care expected from a reasonably competent practitioner.",
+    "steps": [
+      "Consult another medical expert to obtain an opinion on the treatment error.",
+      "Lodge a complaint with the State Medical Council.",
+      "File a claim for compensation in the State Consumer Commission or National Consumer Commission."
+    ],
+    "risk": "Very High - Proving medical negligence is technically complex and requires expert testimony."
   }
 ]
