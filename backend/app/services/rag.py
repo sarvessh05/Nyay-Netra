@@ -1,76 +1,98 @@
+import time
+from typing import List, Optional
 from app.services.retriever import retrieve_context
 from app.services.ai import call_gemini, call_groq
+from app.services.formatter import format_ai_response
 
-def build_prompt(query: str, context: list):
+def build_prompt(query: str, context: list, history: Optional[list] = None):
     """
-    Constructs a structured legal prompt for the AI, integrating retrieved context.
+    Constructs a compassionate, high-fidelity legal prompt for the common man.
+    Integrates rich context and handles conversation history for follow-up support.
     """
-    context_text = "\n\n".join(context) if context else "No specific legal context found in our dataset."
+    context_text = "\n\n".join(context) if context else "No direct matches found in our local knowledge base. Use general Indian law (citing BNS/BNSS 2023 for criminal matters)."
     
+    # Format history if it exists
+    history_text = ""
+    if history:
+        history_text = "\n### PREVIOUS CONVERSATION ###\n"
+        for msg in history:
+            role = "USER" if msg.role == "user" else "ASSISTANT"
+            history_text += f"{role}: {msg.content}\n"
+
     prompt = f"""
-    You are 'Nyaya Netra', a premium AI legal assistant specialized in Indian law. 
-    Your goal is to provide structured and empathetic legal guidance.
+    PERSONALITY: You are 'Nyaya Netra' (ਨਿਆਇ ਨੇਤਰ), a friendly and compassionate legal guardian for the common man in India. 
+    Your tone must be reassuring, patient, and easy to understand. Avoid legal jargon where possible. 
+    If the user is stressed, acknowledge their problem with empathy (e.g., "I'm sorry you're going through this, let's fix it together").
 
-    ### USER QUERY ###
-    {query}
-
-    ### LEGAL CONTEXT (Retrieved from laws.json) ###
+    ### CONTEXT FROM DATABASE ###
     {context_text}
 
-    ### INSTRUCTIONS ###
-    1. Provide a clear and accurate legal analysis.
-    2. Base your response on the provided LEGAL CONTEXT if available. If no context is found, use your general legal knowledge but be cautious.
-    3. You MUST respond ONLY in the following valid JSON structure:
+    {history_text}
+
+    ### CURRENT USER QUERY ###
+    {query}
+
+    ### RESPONSE GUIDELINES ###
+    1. Helpfulness is 90% of your job. Be a friend first, a lawyer second.
+    2. Provide a definitive, actionable result in the first response.
+    3. CITE specific Sections/Acts clearly (BNS, BNSS, Consumer Act, etc.).
+    4. You MUST respond ONLY in valid JSON with this exact schema:
     {{
-        "issue": "Brief summary of the legal issue (max 10 words)",
-        "law": "Formal name of the law or statute that applies",
-        "steps": ["Action Step 1", "Action Step 2", "Action Step 3"],
-        "risk": "Risk level (Low/Moderate/High) + 1 brief sentence explaining why",
-        "advice": "Concise and actionable legal advice written directly to the user",
-        "disclaimer": "AI guidance disclaimer: This is not a substitute for professional legal advice.",
-        "model_used": "Leave this field empty (will be filled by the system)"
+        "issue": "Identify the core problem",
+        "category": "Broad category",
+        "law_citation": "Exact Act/Sections",
+        "explanation": "FRIENDLY and thorough summary for a non-lawyer. This is your chance to talk to the user like a mentor. Reassure them, explain the 'why', and speak directly to their concern.",
+        "action_plan": ["Specific Step 1", "Step 2", "..."],
+        "documents_needed": ["Proof A", "Document B", "..."],
+        "where_to_go": "Exact office or portal",
+        "risk_and_timeline": "Realistic timeline and reassurance",
+        "is_legal": true/false,
+        "model_used": ""
     }}
     """
     return prompt
 
-def process_query(query: str):
+def process_query(query: str, history: Optional[list] = None):
     """
-    Coordinates the RAG pipeline:
-    1. Retrieves relevant legal context.
-    2. Builds the prompt.
-    3. Calls the primary AI (Gemini).
-    4. Falls back to Groq if Gemini fails.
-    5. Returns the structured dictionary.
+    Coordinates the RAG pipeline with history support and friendly fallbacks.
     """
-    # 1. Retrieve relevant legal facts
+    start_retrieval = time.time()
     context = retrieve_context(query)
+    retrieval_time = time.time() - start_retrieval
     
-    # 2. Build the AI instructions
-    prompt = build_prompt(query, context)
+    prompt = build_prompt(query, context, history)
     
-    # 3. Attempt Primary Call (Gemini)
+    start_ai = time.time()
     response = call_gemini(prompt)
     model_name = "Gemini 1.5 Flash"
     
-    # 4. Fallback to Groq if necessary
     if not response:
         print("Gemini failed. Falling back to Groq...")
         response = call_groq(prompt)
-        model_name = "Groq / Llama 3.1"
+        model_name = "Groq / Llama 3.3"
         
+    ai_time = time.time() - start_ai
+    
     if response:
-        # Stamp the response with the model that actually provided the answer
-        response["model_used"] = model_name
-        return response
+        formatted_response = format_ai_response(response)
+        if formatted_response:
+            formatted_response["model_used"] = model_name
+            formatted_response["disclaimer"] = "Disclaimer: Nyaya Netra provides AI-generated legal info for educational purposes. Always consult a lawyer."
+            
+            print(f"Metrics: Retrieval: {retrieval_time:.3f}s | AI: {ai_time:.3f}s")
+            return formatted_response
         
-    # If all AI services fail, return a structured error response
+    # Safety fallback
     return {
-        "issue": "AI Service Temporarily Unavailable",
-        "law": "N/A",
-        "steps": ["Please try again in a few moments."],
-        "risk": "N/A",
-        "advice": "The legal assistant is experiencing high traffic. Your query is important to us.",
+        "issue": "Technical Delay",
+        "category": "System",
+        "law_citation": "N/A",
+        "explanation": "I'm so sorry, but my legal systems are a bit slow right now. Give me a moment!",
+        "action_plan": ["Please refresh and ask me again. I'm here to help!"],
+        "documents_needed": ["N/A"],
+        "where_to_go": "N/A",
+        "risk_and_timeline": "N/A",
         "is_legal": False,
         "model_used": "Failed",
-        "disclaimer": "N/A - Service Unavailable"
+        "disclaimer": "N/A"
     }

@@ -1,0 +1,138 @@
+new_entries = [
+  {
+    'keywords': ['cheque bounce', 'bounced cheque', 'insufficient funds', 'check bounce', '138 case', 'cheque return memo'],
+    'issue': 'Cheque Bounce (Dishonour of Cheque)',
+    'category': 'Financial/Criminal',
+    'severity': 'High',
+    'description': 'When a cheque you received is returned unpaid by the bank due to insufficient funds or signature mismatch.',
+    'laws': [
+      { 'act': 'Negotiable Instruments Act, 1881', 'sections': ['Section 138'] }
+    ],
+    'steps': [
+      'Send a formal Legal Notice to the cheque issuer within 30 days of receiving the Cheque Return Memo from the bank.',
+      'The notice must demand the exact cheque amount within 15 days of receiving the notice.',
+      'If they don\'t pay after 15 days, file a criminal complaint in the Magistrate Court within the next 30 days.',
+      'Do NOT delay this timeline, or you lose the right to file a Section 138 case.'
+    ],
+    'proof_required': ['Original bounced cheque', 'Cheque Return Memo from Bank', 'Copy of Legal Notice sent', 'Postal receipt of the notice'],
+    'authority': 'Judicial Magistrate Court',
+    'risk': 'High - Strict 30-day deadlines apply; it is a criminal offense punishable by up to 2 years in jail.'
+  },
+  {
+    'keywords': ['freelancer not paid', 'client not paying', 'payment delayed', 'breach of contract', 'freelance payment', 'paisa nahi diya'],
+    'issue': 'Freelancer/Contractor Non-Payment',
+    'category': 'Employment/Civil',
+    'severity': 'Medium',
+    'description': 'When a client refuses to pay for freelance services rendered as per agreement.',
+    'laws': [
+      { 'act': 'Indian Contract Act, 1872', 'sections': ['Section 73 (Breach of Contract)'] },
+      { 'act': 'Civil Procedure Code, 1908', 'sections': ['Order 37 (Summary Suit)'] }
+    ],
+    'steps': [
+      'Organize chronologically all emails, WhatsApp chats, and invoices proving the work was delivered.',
+      'Send a formal Legal Notice through a lawyer demanding payment.',
+      'If they ignore the notice, file a Summary Suit (Order 37) in a civil court for fast-track recovery.',
+      'You can also use Online Dispute Resolution (ODR) platforms like Sama or Presolv360 for cheaper arbitration.'
+    ],
+    'proof_required': ['Email/Chat agreements', 'Invoices sent', 'Proof of delivery of work', 'Bank statement showing non-payment'],
+    'authority': 'Civil Court / Arbitrator',
+    'risk': 'Moderate - Usually resolved by legal notice; courts take time but Summary Suits are faster.'
+  },
+  {
+    'keywords': ['college holding original certificate', 'mark sheet not giving', 'ugc fee refund', 'college fee refund', 'school fee issue', 'college scam'],
+    'issue': 'College Retaining Certificates & Fee Refund Refusal',
+    'category': 'Education',
+    'severity': 'Medium',
+    'description': 'Institutions holding original marksheets to force students to pay fees or refusing UGC-mandated fee refunds on cancellation.',
+    'laws': [
+      { 'act': 'UGC Guidelines', 'sections': ['Grievance Redressal Regulations (No Retention of Originals)'] }
+    ],
+    'steps': [
+      'No college or university can legally retain your original certificates (10th/12th/Degree) under UGC rules.',
+      'If you cancel admission 15 days before the deadline, you are entitled to a 100% refund (minus processing fee).',
+      'Send a written demand to the college Principal/Director citing UGC rules.',
+      'Lodge a formal complaint online on the UGC e-Samadhan portal.'
+    ],
+    'proof_required': ['Admission receipt', 'Cancellation application copy', 'Written refusal by college'],
+    'authority': 'UGC e-Samadhan Portal & Consumer Court',
+    'risk': 'Low - UGC rules are strictly pro-student; colleges face de-recognition for violations.'
+  },
+  {
+    'keywords': ['msme payment delay', 'msme samadhaan', 'vendor not paid', 'b2b payment issue', 'business payment stuck', 'section 43b(h)'],
+    'issue': 'MSME Delayed Payments',
+    'category': 'Business/MSME',
+    'severity': 'High',
+    'description': 'When buyers delay payments to registered Micro or Small Enterprises beyond 45 days.',
+    'laws': [
+      { 'act': 'MSMED Act, 2006', 'sections': ['Section 15 (Timeline)', 'Section 16 (Compound Interest)'] },
+      { 'act': 'Income Tax Act', 'sections': ['Section 43B(h)'] }
+    ],
+    'steps': [
+      'Ensure your business has Udyam Registration.',
+      'If payment is delayed beyond 45 days, the buyer must legally pay compound interest at 3x the RBI bank rate.',
+      'File a case online on the MSME Samadhaan portal.',
+      'Under new IT rules, the buyer cannot claim a tax deduction for your invoice until they actually pay you.'
+    ],
+    'proof_required': ['Udyam Certificate', 'Invoices', 'Purchase Orders', 'Delivery Challans / Proof of receipt'],
+    'authority': 'Micro and Small Enterprise Facilitation Council (MSEFC)',
+    'risk': 'High - The Samadhaan portal is highly effective and mandates resolution within 90 days.'
+  },
+  {
+    'keywords': ['flight delayed', 'flight cancelled', 'dgca compensation', 'denied boarding', 'overbooked flight', 'airline compensation'],
+    'issue': 'Flight Delay / Cancellation Compensation',
+    'category': 'Travel/Consumer',
+    'severity': 'Medium',
+    'description': 'Airline delaying or cancelling a flight without proper notice, or denying boarding due to overbooking.',
+    'laws': [
+      { 'act': 'Civil Aviation Requirements (DGCA)', 'sections': ['CAR Section 3, Series M, Part IV'] }
+    ],
+    'steps': [
+      'For delays over 2 hours, airlines must provide free meals.',
+      'For delays over 6 hours, you are entitled to an alternate flight or full refund.',
+      'If denied boarding due to overbooking, claim compensation up to 400% of basic fare (max INR 20k).',
+      'If the airline refuses, lodge a grievance on the AirSewa portal or app.'
+    ],
+    'proof_required': ['Boarding pass / Ticket', 'Communication/SMS from airline regarding delay', 'Expense receipts if any'],
+    'authority': 'AirSewa Portal (Ministry of Civil Aviation)',
+    'risk': 'Low - DGCA rules are very strict, AirSewa usually resolves it within weeks.'
+  },
+  {
+    'keywords': ["stray dogs biting", "municipal corporation dog catch", "street dog menace", "dog feeder harassment"],
+    'issue': "Stray Dog Management & Bites",
+    'category': "Civic/Animal Welfare",
+    'severity': "Medium",
+    'description': "Conflicts regarding street dogs in residential areas, dog bites, or harassment of animal feeders.",
+    'laws': [
+      { 'act': "Prevention of Cruelty to Animals Act, 1960", 'sections': ["Section 11"] },
+      { 'act': "Animal Birth Control (ABC) Rules, 2023", 'sections': ["Sterilization provisions"] }
+    ],
+    'steps': [
+      "It is illegal for the Municipal Corporation to kill or permanently relocate stray dogs. They can only take them for sterilization and drop them back.",
+      "If bitten, immediately seek medical help for anti-rabies vaccination.",
+      "RWAs cannot ban keeping pets or legally stop residents from feeding strays (Supreme Court guidelines).",
+      "File a complaint via the Animal Welfare Board of India for cruelty."
+    ],
+    'proof_required': ["Medical reports inside case of bite", "Video of animal cruelty or illegal relocation"],
+    'authority': "Municipal Corporation & Animal Welfare Board",
+    'risk': "Moderate - Relies heavily on local municipal corporation efficiency."
+  },
+  {
+    'keywords': ["property partition", "ancestral property dispute", "brother not giving share", "family land dispute", "varasat bare"],
+    'issue': "Ancestral Property Dispute & Partition",
+    'category': "Property/Family",
+    'severity': "High",
+    'description': "Disputes among family members regarding the division of inherited or ancestral property.",
+    'laws': [
+      { 'act': "Hindu Succession Act, 1956", 'sections': ["Section 8 (General rules)", "Section 14 (Women's absolute property)"] }
+    ],
+    'steps': [
+      "Obtain a 'Legal Heir Certificate' or 'Succession Certificate' from the local Tehsildar/Court.",
+      "Send a legal notice to co-owners demanding partition of the property by metes and bounds.",
+      "If they refuse, file a 'Suit for Partition' in the Civil Court.",
+      "Daughters have equal coparcenary rights in ancestral property as sons since 2005."
+    ],
+    'proof_required': ["Death certificate of ancestor", "Property documents/Khata", "Legal Heir Certificate"],
+    'authority': "Civil Court",
+    'risk': "Very High - These cases can take years (sometimes decades) in court; mediation is highly recommended."
+  }
+]

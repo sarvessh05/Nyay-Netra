@@ -1,22 +1,33 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
+
+class Message(BaseModel):
+    """
+    Represents a single message in a conversation.
+    """
+    role: str  # 'user' or 'assistant'
+    content: str
 
 class QueryRequest(BaseModel):
     """
     Standard request schema for a legal query.
     """
     query: str
+    history: Optional[List[Message]] = []
 
 class QueryResponse(BaseModel):
     """
-    Structured response schema for the AI legal assistant.
-    Matches the JSON format returned by the RAG engine.
+    Rich response schema for the AI legal assistant.
+    Provides detailed legal mapping and actionable plans for the common man.
     """
     issue: str
-    law: str
-    steps: List[str]
-    risk: str
-    advice: str
+    category: str
+    law_citation: str
+    explanation: str
+    action_plan: List[str]
+    documents_needed: List[str]
+    where_to_go: str
+    risk_and_timeline: str
     is_legal: bool
     model_used: str
-    disclaimer: str = "Disclaimer: Nyay Netra provides AI-generated legal information for educational purposes only. It is not a substitute for professional legal advice. Consult a qualified lawyer for your specific case."
+    disclaimer: str = "Disclaimer: Nyaya Netra provides AI-generated legal info for educational purposes. It is NOT legal advice. Always consult a lawyer."

@@ -28,12 +28,20 @@ def retrieve_context(query: str):
 
         if score > 0:
             # Format the entry into a single block of text for the AI context window
+            laws_str = "\n".join([f"- {l['act']} ({', '.join(l['sections'])})" for l in entry.get("laws", [])])
+            steps_str = "\n- ".join(entry.get("steps", []))
+            proof_str = "\n- ".join(entry.get("proof_required", []))
+            
             context_str = (
-                f"### Legal Context Item ###\n"
-                f"Topic: {entry.get('issue')}\n"
-                f"Applicable Law: {entry.get('law')}\n"
-                f"Recommended Steps: {', '.join(entry.get('steps', []))}\n"
-                f"Risk Profile: {entry.get('risk')}\n"
+                f"### [LEGAL MATCH: {entry.get('issue')}] ###\n"
+                f"CATEGORY: {entry.get('category')}\n"
+                f"SEVERITY: {entry.get('severity')}\n"
+                f"DESCRIPTION: {entry.get('description', 'N/A')}\n"
+                f"RELEVANT STATUTES:\n{laws_str}\n"
+                f"IMMEDIATE ACTIONABLE STEPS:\n- {steps_str}\n"
+                f"EVIDENCE/PROOF REQUIRED:\n- {proof_str}\n"
+                f"AUTHORITY TO APPROACH: {entry.get('authority', 'N/A')}\n"
+                f"PROCESS RISK & EXPECTED DURATION: {entry.get('risk', 'N/A')}\n"
             )
             scored_laws.append((score, context_str))
 

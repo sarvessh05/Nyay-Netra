@@ -1,112 +1,1123 @@
 [
   {
-    "keywords": ["deposit", "rent", "landlord", "security deposit"],
-    "issue": "Security Deposit Recovery",
-    "law": "Model Tenancy Act (MTA), 2021 & Local Rent Control Acts. The landlord must return the security deposit within one month of the tenant vacating the premises, after making necessary deductions for repairs or unpaid dues.",
-    "steps": [
-      "Gather evidence: rent receipts, photographs of the house, and the original agreement.",
-      "Send a formal legal notice for the recovery of the security deposit through an advocate.",
-      "If not resolved, file a petition before the Rent Authority/Controller under the Model Tenancy Act."
+    "keywords": [
+      "upi fraud",
+      "phishing",
+      "online scam",
+      "bank fraud",
+      "otp scam",
+      "money stolen online",
+      "paise kat gaye"
     ],
-    "risk": "Moderate - Usually resolved via legal notice, but may take 6-12 months if it goes to the Rent Court."
-  },
-  {
-    "keywords": ["consumer", "refund", "e-commerce", "defective", "flipkart", "amazon"],
-    "issue": "Defective Product/E-commerce Refund",
-    "law": "Consumer Protection Act, 2019. Consumers have the right to be protected against the marketing of goods which are hazardous to life and property, and the right to seek redressal against unfair trade practices.",
-    "steps": [
-      "File a formal complaint on the National Consumer Helpline (NCH) portal.",
-      "Send a formal notice to the seller and the e-commerce platform.",
-      "If the value is below ₹50 Lakhs, file a case in the District Consumer Disputes Redressal Commission (DCDRC)."
-    ],
-    "risk": "Low - High success rate in consumer courts; no advocate mandatory for the consumer."
-  },
-  {
-    "keywords": ["salary", "unpaid", "employer", "labor", "termination"],
-    "issue": "Unpaid Salary or Wrongful Termination",
-    "law": "Payment of Wages Act, 1936 and Industrial Disputes Act, 1947. Employers are legally bound to pay wages by the 7th or 10th of each month. Termination without notice or 'just cause' is challengeable.",
-    "steps": [
-      "Send a formal request for dues via email/registered post.",
-      "Approach the local Labor Commissioner's office for mediation.",
-      "File a recovery suit in a Labor Court if the dispute remains unresolved."
-    ],
-    "risk": "Moderate - Labor laws favor employees, but the process can be slow (1-2 years)."
-  },
-  {
-    "keywords": ["cyber", "fraud", "phishing", "online", "scam", "bank"],
     "issue": "Cyber Financial Fraud",
-    "law": "Information Technology Act, 2000 & RBI Guidelines on Limiting Liability. If a fraud is reported within 3 days, the customer's liability is zero; if reported within 4-7 days, it's limited to ₹5,000 to ₹25,000.",
-    "steps": [
-      "Immediately call the National Cyber Crime Helpline at 1930.",
-      "Report the transaction to your bank to freeze the account/card.",
-      "File a formal complaint on 'cybercrime.gov.in' and visit the local Cyber Police Station."
+    "category": "Cyber Crime",
+    "severity": "High",
+    "description": "Unauthorized transfer of money from your bank account or wallet through digital means.",
+    "laws": [
+      {
+        "act": "Information Technology Act, 2000",
+        "sections": [
+          "Section 43",
+          "Section 66",
+          "Section 66D"
+        ]
+      },
+      {
+        "act": "RBI Guidelines",
+        "sections": [
+          "Limited Liability of Customers"
+        ]
+      },
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 318 (Cheating)"
+        ]
+      }
     ],
-    "risk": "High - Recovery depends on how quickly the incident is reported (the 'Golden Hour')."
+    "steps": [
+      "Immediately call the National Cyber Crime Helpline at 1930 (the 'Golden Hour').",
+      "Report the transaction to your bank/wallet within 3 days for zero liability.",
+      "File a formal complaint on the 'cybercrime.gov.in' portal.",
+      "Visit the nearest Cyber Police Station with transaction screenshots."
+    ],
+    "proof_required": [
+      "Transaction ID",
+      "Screenshot of fraud message/link",
+      "Bank statement"
+    ],
+    "authority": "National Cyber Crime Reporting Portal & Local Cyber Cell",
+    "risk": "High - Recovery success drops significantly after the first 24 hours."
   },
   {
-    "keywords": ["fir", "police", "complaint", "refusal", "zero fir"],
+    "keywords": [
+      "loan app harassment",
+      "threat calls",
+      "loan recovery abuse",
+      "loan recovery threat",
+      "gali de rahe"
+    ],
+    "issue": "Loan App Harassment & Recovery Abuse",
+    "category": "Financial Abuse",
+    "severity": "High",
+    "description": "Illegal harassment, threats, or defamation by digital loan apps or recovery agents.",
+    "laws": [
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 351 (Intimidation)",
+          "Section 352 (Defamation)"
+        ]
+      },
+      {
+        "act": "RBI Digital Lending Guidelines",
+        "sections": [
+          "Code of Conduct for Recovery"
+        ]
+      }
+    ],
+    "steps": [
+      "Record all calls and save screenshots of threatening messages/contacts.",
+      "Do not pay under threat; report the app/agent to the RBI Ombudsman (cms.rbi.org.in).",
+      "File a cybercrime complaint if they share your morphed photos or contacts.",
+      "Report the app on Google Play Store/Apple App Store for violation."
+    ],
+    "proof_required": [
+      "Call recordings",
+      "Screenshots of threats",
+      "App details and loan agreement"
+    ],
+    "authority": "RBI Ombudsman & Local Police",
+    "risk": "High - These apps often use illegal access to your contacts to shame you."
+  },
+  {
+    "keywords": [
+      "revenge porn",
+      "nude leak",
+      "private photo",
+      "video viral",
+      "privacy violation",
+      "non-consensual",
+      "stalking",
+      "peecha kar raha"
+    ],
+    "issue": "Privacy Violation & Stalking",
+    "category": "Cyber/Women Safety",
+    "severity": "Very High",
+    "description": "Sharing private content without consent or persistent unwanted following/monitoring (physical or digital).",
+    "laws": [
+      {
+        "act": "Information Technology Act, 2000",
+        "sections": [
+          "Section 66E (Privacy)",
+          "Section 67A (Explicit Material)"
+        ]
+      },
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 77 (Voyeurism)",
+          "Section 78 (Stalking)"
+        ]
+      }
+    ],
+    "steps": [
+      "Report the content immediately to the social media platform (Instagram/FB/X) for takedown.",
+      "File a complaint on cybercrime.gov.in under 'Women/Child Related Crime'.",
+      "For physical stalking, call 112 and file an FIR at the nearest police station.",
+      "Request a 'Content Takedown' order through the Cyber Cell."
+    ],
+    "proof_required": [
+      "URL of the content",
+      "Source of the leak/messages",
+      "Identity proof",
+      "Logs of stalking instances"
+    ],
+    "authority": "Cyber Crime Cell & Local Police",
+    "risk": "High - Stalking can escalate to physical violence if not reported early."
+  },
+  {
+    "keywords": [
+      "possession delay",
+      "builder fraud",
+      "rera complaint",
+      "flat refund",
+      "house delay",
+      "flat delay"
+    ],
+    "issue": "Real Estate / Builder Fraud",
+    "category": "Property",
+    "severity": "Medium",
+    "description": "When a builder fails to hand over the keys to your home by the date promised or changes the plan without consent.",
+    "laws": [
+      {
+        "act": "RERA Act, 2016",
+        "sections": [
+          "Section 18 (Refund & Interest)",
+          "Section 31 (Complaint)"
+        ]
+      }
+    ],
+    "steps": [
+      "Check if the project is registered under the State RERA portal.",
+      "Claim full refund with interest (MCLR + 2%) for the delay if you want to exit.",
+      "If staying, claim monthly interest for every month of delay from the builder.",
+      "File a formal complaint on the State RERA website with payment proofs."
+    ],
+    "proof_required": [
+      "Builder-Buyer Agreement",
+      "Payment receipts",
+      "Possession date proof from allotment letter"
+    ],
+    "authority": "Real Estate Regulatory Authority (RERA)",
+    "risk": "Moderate - RERA is very pro-buyer, but recovery of funds can take 12-18 months."
+  },
+  {
+    "keywords": [
+      "fir refused",
+      "police not registering",
+      "zero fir",
+      "complaint not taken",
+      "fir refuse"
+    ],
     "issue": "Police Refusal to Register FIR",
-    "law": "Section 154(3) and 156(3) of the CrPC (now Section 173 and 175 of BNSS). If an officer-in-charge refuses to register an FIR, the complainant can send the substance of the information to the Superintendent of Police (SP).",
-    "steps": [
-      "Submit a written complaint to the Superintendent of Police (SP) via registered post.",
-      "File an application before a Judicial Magistrate under Section 156(3) of CrPC to order the police to investigate.",
-      "Request a 'Zero FIR' if the crime occurred in a different jurisdiction."
+    "category": "Legal Procedure",
+    "severity": "High",
+    "description": "When a police officer refuses to record your complaint about a serious (cognizable) crime.",
+    "laws": [
+      {
+        "act": "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+        "sections": [
+          "Section 173 (Zero FIR)",
+          "Section 175 (Magistrate Chain)"
+        ]
+      }
     ],
-    "risk": "High - Requires persistent legal follow-up with the SP or the Court."
+    "steps": [
+      "Request a 'Zero FIR' if the crime happened elsewhere\u2014they cannot refuse to take it and transfer it later.",
+      "Send the complaint in writing to the Superintendent of Police (SP) via Registered Post.",
+      "If still no action, file an application before a Judicial Magistrate under Section 175(3) of BNSS.",
+      "The Magistrate can then order the police to investigate."
+    ],
+    "proof_required": [
+      "Copy of the original complaint",
+      "Postal receipt of letter to SP"
+    ],
+    "authority": "Superintendent of Police (SP) or Judicial Magistrate",
+    "risk": "High - Requires persistent follow-up; not registering a cognizable FIR is a punishable offence for police."
   },
   {
-    "keywords": ["property", "ancestral", "inheritance", "partition"],
-    "issue": "Ancestral Property Claim",
-    "law": "Hindu Succession (Amendment) Act, 2005. Daughters have equal rights as sons in coparcenary (ancestral) property by birth, regardless of whether the father was alive in 2005.",
-    "steps": [
-      "Obtain the family tree (Genealogical Table) and title deeds of the property.",
-      "Send a legal notice for partition to the other co-owners.",
-      "File a Suit for Partition in the Civil Court of the jurisdiction where the property is located."
+    "keywords": [
+      "domestic violence",
+      "husband beating",
+      "saas sasur abuse",
+      "mental harassment",
+      "threats",
+      "ghar me maarte hai"
     ],
-    "risk": "Very High - Property suits in India can take 5-15 years to reach finality."
+    "issue": "Domestic Violence Protection",
+    "category": "Women Safety",
+    "severity": "Very High",
+    "description": "Physical, emotional, sexual, or economic abuse within a domestic relationship.",
+    "laws": [
+      {
+        "act": "Protection of Women from Domestic Violence Act, 2005",
+        "sections": [
+          "Section 12 (Relief)",
+          "Section 18 (Protection Order)"
+        ]
+      },
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 85 (Cruelty by Husband/Relatives)"
+        ]
+      }
+    ],
+    "steps": [
+      "Call the Women Helpline 1091 or National Helpline 112.",
+      "Visit a Protection Officer (PO) or a Service Provider in your area.",
+      "File for a 'Protection Order' to stop the abuser from contacting or harming you.",
+      "File for 'Residence Orders' to ensure you are not thrown out of your shared household."
+    ],
+    "proof_required": [
+      "Medical reports (if physical)",
+      "Audio/Video recordings of abuse",
+      "Witness statements"
+    ],
+    "authority": "Magistrate Court & Protection Officer (PO)",
+    "risk": "High - Immediate safety is priority; don't wait for physical injury to report harassment."
   },
   {
-    "keywords": ["divorce", "mutual", "alimony", "maintenance"],
-    "issue": "Mutual Consent Divorce",
-    "law": "Section 13B of the Hindu Marriage Act, 1955. Both parties must live separately for at least one year and agree that the marriage should be dissolved.",
-    "steps": [
-      "Draft a joint petition outlining terms of alimony, child custody, and asset division.",
-      "File the petition in the Family Court (First Motion).",
-      "Re-appear after a 6-month 'cooling-off' period (can be waived) for the Second Motion and Final Decree."
+    "keywords": [
+      "maintenance",
+      "wife support",
+      "parent support",
+      "abandoned",
+      "125 crpc",
+      "senior citizen"
     ],
-    "risk": "Low - The fastest and most dignified way to end a marriage in India."
+    "issue": "Maintenance Rights (Wife/Parents)",
+    "category": "Family/Social",
+    "severity": "Medium",
+    "description": "The legal right to receive financial support from a spouse or child if you cannot support yourself.",
+    "laws": [
+      {
+        "act": "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+        "sections": [
+          "Section 144 (Maintenance)"
+        ]
+      },
+      {
+        "act": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007",
+        "sections": [
+          "Section 4"
+        ]
+      }
+    ],
+    "steps": [
+      "File a petition for maintenance in the Family Court or Magistrate Court.",
+      "Request 'Interim Maintenance' for immediate expenses while the case is pending.",
+      "Senior citizens can approach the Maintenance Tribunal (SDM office) for a faster process.",
+      "If you have gifted property to kids and they neglect you, you can get it back under Section 23 of the Act."
+    ],
+    "proof_required": [
+      "Marriage proof",
+      "Income proof of the person you are suing",
+      "Age proof (for parents)"
+    ],
+    "authority": "Family Court / Maintenance Tribunal",
+    "risk": "Moderate - Usually successful if income is proven, but recovery can be slow if respondent hides assets."
   },
   {
-    "keywords": ["cheque", "bounce", "138", "ni act", "payment"],
-    "issue": "Cheque Bounce (Dishonour)",
-    "law": "Section 138 of the Negotiable Instruments Act, 1881. It is a criminal offence punishable by imprisonment of up to 2 years or a fine of up to twice the cheque amount.",
-    "steps": [
-      "Send a formal 'Demand Notice' to the drawer within 30 days of receiving the 'Return Memo' from the bank.",
-      "If no payment is made within 15 days of the notice, file a criminal complaint in the Magistrate Court within the next 30 days.",
-      "Provide the original cheque, return memo, and acknowledgment of the demand notice as evidence."
+    "keywords": [
+      "workplace harassment",
+      "sexual harassment",
+      "office abuse",
+      "posh",
+      "ic committee",
+      "office harassment"
     ],
-    "risk": "Moderate - Strong legal tool, but courts are heavily burdened with 138 cases."
+    "issue": "Workplace Sexual Harassment (POSH)",
+    "category": "Employment/Women Safety",
+    "severity": "High",
+    "description": "Unwelcome sexual advances or hostile environment at the workplace.",
+    "laws": [
+      {
+        "act": "POSH Act, 2013",
+        "sections": [
+          "Section 4 (Internal Committee)",
+          "Section 9 (Complaint process)"
+        ]
+      }
+    ],
+    "steps": [
+      "Check if your company has an Internal Committee (IC)\u2014mandatory for 10+ employees.",
+      "Submit a written complaint to the IC within 3 months of the last incident.",
+      "If no IC exists, approach the Local Committee (LC) at the District Collector's office.",
+      "Keep records of all relevant emails and chats."
+    ],
+    "proof_required": [
+      "Email records",
+      "Witness accounts",
+      "Internal chat screenshots"
+    ],
+    "authority": "Internal Committee (IC) or District Local Committee",
+    "risk": "Medium - Retaliation is illegal; you can ask for a transfer or paid leave during the probe."
   },
   {
-    "keywords": ["maternity", "leave", "pregnancy", "benefits"],
-    "issue": "Maternity Benefit Refusal",
-    "law": "Maternity Benefit (Amendment) Act, 2017. Female employees in any establishment with 10 or more people are entitled to 26 weeks of paid maternity leave.",
-    "steps": [
-      "Request the benefit in writing to the HR department at least 10 weeks before expected delivery.",
-      "If refused, file a complaint with the Inspector under the Maternity Benefit Act.",
-      "The Inspector can direct the employer to pay and also impose a penalty."
+    "keywords": [
+      "medical error",
+      "wrong surgery",
+      "hospital overcharging",
+      "excessive bill",
+      "doctor mistake",
+      "medical fraud",
+      "galat treatment"
     ],
-    "risk": "Low - The law is very strict and clearly in favor of the employee."
+    "issue": "Medical Negligence & Overcharging",
+    "category": "Consumer/Medical",
+    "severity": "High",
+    "description": "Failure in duty of care or unfair billing practices by hospitals/doctors.",
+    "laws": [
+      {
+        "act": "Consumer Protection Act, 2019",
+        "sections": [
+          "Section 2(11) (Deficiency)",
+          "Section 35 (Complaint)"
+        ]
+      },
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 106 (Death by Negligence)"
+        ]
+      }
+    ],
+    "steps": [
+      "Gather all files, prescriptions, and detailed bills immediately.",
+      "For overcharging, compare with the hospital's published tariff (mandatory to display).",
+      "Lodge a complaint with the State Medical Council/National Medical Commission.",
+      "File for compensation in the Consumer Court using the 'e-Daakhil' portal."
+    ],
+    "proof_required": [
+      "Discharge summary",
+      "Itemized bills",
+      "Second opinion medical report"
+    ],
+    "authority": "Consumer Commission & Medical Council",
+    "risk": "High - Requires expert medical testimony to prove negligence."
   },
   {
-    "keywords": ["negligence", "doctor", "hospital", "medical"],
-    "issue": "Medical Negligence",
-    "law": "Consumer Protection Act & Indian Penal Code (Section 304A). Doctors are liable for negligence if they fail to provide the standard of care expected from a reasonably competent practitioner.",
-    "steps": [
-      "Consult another medical expert to obtain an opinion on the treatment error.",
-      "Lodge a complaint with the State Medical Council.",
-      "File a claim for compensation in the State Consumer Commission or National Consumer Commission."
+    "keywords": [
+      "consumer refund",
+      "defective item",
+      "amazon refund",
+      "fake product",
+      "refund nahi mila",
+      "e-commerce fraud"
     ],
-    "risk": "Very High - Proving medical negligence is technically complex and requires expert testimony."
+    "issue": "Consumer Complaints & E-commerce",
+    "category": "Consumer",
+    "severity": "Low",
+    "description": "When a product/service is faulty or not as described by the seller.",
+    "laws": [
+      {
+        "act": "Consumer Protection Act, 2019",
+        "sections": [
+          "Section 35",
+          "E-commerce Rules"
+        ]
+      }
+    ],
+    "steps": [
+      "Call the National Consumer Helpline at 1800-11-4000.",
+      "Register a complaint on the 'e-Daakhil' portal (edaakhil.nic.in).",
+      "Send a formal legal notice to the company's grievance officer via email.",
+      "File a case in the District Consumer Court (no lawyer required for cases under 50L)."
+    ],
+    "proof_required": [
+      "Invoice/Bill",
+      "Photos/Videos of the defect",
+      "Email trail with the company"
+    ],
+    "authority": "Consumer Commission / National Consumer Helpline",
+    "risk": "Low - High success rate if you have the bill and evidence."
+  },
+  {
+    "keywords": [
+      "accident relief",
+      "hit and run",
+      "insurance claim rejected",
+      "road accident",
+      "gaadi takkar",
+      "claim denied"
+    ],
+    "issue": "Motor Accident & Insurance Claims",
+    "category": "Traffic/Insurance",
+    "severity": "High",
+    "description": "Right to claim compensation for road accidents or when an insurance company denies a legitimate claim.",
+    "laws": [
+      {
+        "act": "Motor Vehicles Act, 1988",
+        "sections": [
+          "Section 166 (MACT)",
+          "Section 161 (Hit & Run)"
+        ]
+      },
+      {
+        "act": "Insurance Act, 1938",
+        "sections": [
+          "Ombudsman Rules"
+        ]
+      }
+    ],
+    "steps": [
+      "File an FIR immediately\u2014this is the base for all insurance and MACT claims.",
+      "For insurance rejection, approach the Insurance Ombudsman (cioins.co.in) within 1 year.",
+      "For Hit & Run (if vehicle not found), the Government pays fixed compensation through the Solatium Fund.",
+      "File a MACT claim for injury or death of a family member."
+    ],
+    "proof_required": [
+      "FIR copy",
+      "Insurance policy",
+      "Hospital records",
+      "Rejection letter from insurer"
+    ],
+    "authority": "MACT & Insurance Ombudsman",
+    "risk": "Moderate - Insurance cases are technical; the Ombudsman is a free alternative to courts."
+  },
+  {
+    "keywords": [
+      "unpaid salary",
+      "force resignation",
+      "termination",
+      "job bond",
+      "salary nahi mila",
+      "job se nikal diya",
+      "bond issue"
+    ],
+    "issue": "Employment Rights & Bond Disputes",
+    "category": "Employment",
+    "severity": "Medium",
+    "description": "Issues related to salary, illegal termination, or exploitative training bonds.",
+    "laws": [
+      {
+        "act": "Payment of Wages Act, 1936",
+        "sections": [
+          "Section 5"
+        ]
+      },
+      {
+        "act": "Indian Contract Act, 1872",
+        "sections": [
+          "Section 27 (Unreasonable Bonds)"
+        ]
+      },
+      {
+        "act": "Industrial Disputes Act, 1947",
+        "sections": [
+          "Section 25F"
+        ]
+      }
+    ],
+    "steps": [
+      "Send a formal 'Demand Notice' via Registered Post to the HR and CEO.",
+      "Employment bonds are mostly illegal if they are purely 'in restraint of trade'\u2014don't pay without legal advice.",
+      "File a complaint with the local Labour Commissioner.",
+      "The Labour Officer can mediate and force the company to pay arrears."
+    ],
+    "proof_required": [
+      "Offer Letter",
+      "Relieving records / termination email",
+      "Bank statement"
+    ],
+    "authority": "Labour Commissioner Office",
+    "risk": "Moderate - Mediation usually works; if not, Labour Court takes 1-2 years."
+  },
+  {
+    "keywords": [
+      "landlord deposit",
+      "security deposit",
+      "deposit nahi de raha",
+      "illegal eviction",
+      "ghar se nikal diya"
+    ],
+    "issue": "Tenant Protection (Deposit & Eviction)",
+    "category": "Property",
+    "severity": "Medium",
+    "description": "Right of a tenant to get their deposit back and not be evicted without a court order.",
+    "laws": [
+      {
+        "act": "Model Tenancy Act, 2021",
+        "sections": [
+          "Section 11 (Security Deposit)",
+          "Section 21 (Eviction Protection)"
+        ]
+      }
+    ],
+    "steps": [
+      "Check your Rent Agreement; the landlord can only deduct for actual damages, not 'painting' unless mentioned.",
+      "If the landlord refuses to return the deposit, approach the Rent Authority (usually the local SDM).",
+      "They cannot cut your electricity or water to force you out\u2014this is a punishable offence.",
+      "File a complaint with the Rent Authority for illegal eviction or harassment."
+    ],
+    "proof_required": [
+      "Rent Agreement",
+      "Rent receipts / bank logs",
+      "Electricity/Water bill in your name (if applicable)"
+    ],
+    "authority": "Rent Authority / Rent Court",
+    "risk": "Low - Rent Authorities are dedicated to fast-tracking these specific disputes."
+  },
+  {
+    "keywords": [
+      "jaan se marne ki dhamki",
+      "threat",
+      "dhamki",
+      "criminal intimidation",
+      "assault",
+      "maar peet"
+    ],
+    "issue": "Criminal Intimidation & Assault",
+    "category": "Criminal",
+    "severity": "High",
+    "description": "Being threatened with death/injury or being physically attacked.",
+    "laws": [
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 351 (Intimidation)",
+          "Section 115 (Assault/Hurt)"
+        ]
+      }
+    ],
+    "steps": [
+      "Record the threat if it's over the phone or save the message.",
+      "Go to the nearest police station to file an FIR or a Non-Cognizable (NC) report (for minor threats).",
+      "Request a medical examination (MLC) immediately if you were physically hurt.",
+      "Ask for police protection if you feel there is an imminent threat to life."
+    ],
+    "proof_required": [
+      "Call recordings",
+      "CCTV footage (if physical)",
+      "MLC (Medical Report) from a Govt hospital"
+    ],
+    "authority": "Local Police Station",
+    "risk": "High - Threats are often precursors to physical crime; report early for prevention."
+  },
+  {
+    "keywords": [
+      "electricity bill high",
+      "electricity overbilling",
+      "water problem",
+      "water supply high bill"
+    ],
+    "issue": "Utility Overbilling (Electricity/Water)",
+    "category": "Utility",
+    "severity": "Low",
+    "description": "Inflated or incorrect bills for electricity and water services.",
+    "laws": [
+      {
+        "act": "Electricity Rules, 2020",
+        "sections": [
+          "Consumer Rights"
+        ]
+      },
+      {
+        "act": "Electricity Act, 2003",
+        "sections": [
+          "Section 42 (CGRF Forum)"
+        ]
+      }
+    ],
+    "steps": [
+      "File a written objection with the Sub-Divisional Officer (SDO) of the department.",
+      "If not solved in 30 days, approach the CGRF (Consumer Grievance Redressal Forum).",
+      "Request a 'Meter Testing' if you suspect the meter is faulty.",
+      "Apply to the Electricity Ombudsman if CGRF doesn't provide relief."
+    ],
+    "proof_required": [
+      "Past 6 months' bills",
+      "Payment receipts",
+      "Meter photo with current reading"
+    ],
+    "authority": "CGRF Forum & Electricity Ombudsman",
+    "risk": "Low - Most billing errors are fixed through the internal departmental process."
+  },
+  {
+    "keywords": [
+      "human trafficking",
+      "forced labor",
+      "ladki bech di",
+      "bonded labor"
+    ],
+    "issue": "Human Trafficking & Forced Labor",
+    "category": "Serious Crime",
+    "severity": "Critical",
+    "description": "Exploitation of humans for labor or sexual acts against their will.",
+    "laws": [
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 143 (Trafficking)"
+        ]
+      },
+      {
+        "act": "Bonded Labour System (Abolition) Act, 1976",
+        "sections": [
+          "Section 4"
+        ]
+      }
+    ],
+    "steps": [
+      "Call the National Emergency Number 112 or Childline 1098 immediately.",
+      "Identify the nearest AHTU (Anti-Human Trafficking Unit) which exists in every district.",
+      "Victims are entitled to immediate rehabilitation and interim compensation from the Govt.",
+      "File an FIR; this is a non-bailable crime."
+    ],
+    "proof_required": [
+      "Location of the victim",
+      "Identity of the traffickers (if known)",
+      "Any communication logs"
+    ],
+    "authority": "Anti-Human Trafficking Unit (AHTU) & Local Police",
+    "risk": "Extremely High - High risk to life; always involve the police and NGOs (like Bachpan Bachao Andolan)."
+  },
+  {
+    "keywords": [
+      "arrest rights",
+      "police station",
+      "custody",
+      "24 hours",
+      "grounds of arrest",
+      "informed",
+      "lawyer access"
+    ],
+    "issue": "Arrest Procedure & Rights",
+    "category": "Criminal/Rights",
+    "severity": "Critical",
+    "description": "Rights of an individual when being arrested by police to prevent custodial torture and illegal detention.",
+    "laws": [
+      {
+        "act": "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+        "sections": [
+          "Section 35 (Grounds of Arrest)",
+          "Section 47 (Notification to relatives)",
+          "Section 57 (Production within 24h)"
+        ]
+      },
+      {
+        "act": "Constitution of India",
+        "sections": [
+          "Article 22"
+        ]
+      }
+    ],
+    "steps": [
+      "Police must inform you of the grounds of arrest and your right to bail (if bailable).",
+      "You have the right to inform one relative or friend immediately about your arrest.",
+      "A memo of arrest must be prepared and signed by at least one witness (relative or local person).",
+      "You must be produced before a Magistrate within 24 hours of arrest (excluding travel time).",
+      "You have the right to consult a legal practitioner of your choice during interrogation."
+    ],
+    "proof_required": [
+      "Arrest Memo copy",
+      "Medical examination report (mandatory upon arrest)",
+      "Daily Diary (DD) entry timing"
+    ],
+    "authority": "Judicial Magistrate & Senior Police Officers",
+    "risk": "Critical - Illegal detention is a serious violation of fundamental rights."
+  },
+  {
+    "keywords": [
+      "second marriage",
+      "bigamy",
+      "wife alive",
+      "husband alive",
+      "illegal marriage",
+      "doosri shadi"
+    ],
+    "issue": "Illegal Second Marriage (Bigamy)",
+    "category": "Family/Criminal",
+    "severity": "High",
+    "description": "Marrying another person while having a living spouse from a valid previous marriage.",
+    "laws": [
+      {
+        "act": "Hindu Marriage Act, 1955",
+        "sections": [
+          "Section 17"
+        ]
+      },
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 82"
+        ]
+      }
+    ],
+    "steps": [
+      "Obtain proof of the second marriage (Photos, Video, Invitation, or Witness statements).",
+      "Gather proof that the first marriage is still valid and subsisting (Marriage Certificate).",
+      "File a criminal complaint before the Magistrate for bigamy.",
+      "The first spouse can also file for a Declaration from the Family Court that the second marriage is null and void."
+    ],
+    "proof_required": [
+      "Proof of first marriage",
+      "Proof of second marriage",
+      "Proof that first spouse was alive during second marriage"
+    ],
+    "authority": "Magistrate Court & Family Court",
+    "risk": "High - Punishment can be up to 7 years in jail and a fine."
+  },
+  {
+    "keywords": [
+      "public nuisance",
+      "loud noise",
+      "illegal construction",
+      "noise pollution",
+      "neighbor issue",
+      "shor macha rahe"
+    ],
+    "issue": "Public Nuisance & Noise Pollution",
+    "category": "Civic/Public Order",
+    "severity": "Medium",
+    "description": "Activities that interfere with a person's right to enjoy their property or environment (noise, pollution, illegal structures).",
+    "laws": [
+      {
+        "act": "Bharatiya Nagarik Suraksha Sanhita, 2023",
+        "sections": [
+          "Section 152 (Removal of Nuisance)"
+        ]
+      },
+      {
+        "act": "Noise Pollution (Regulation and Control) Rules, 2000",
+        "sections": [
+          "General Rules"
+        ]
+      }
+    ],
+    "steps": [
+      "For noise after 10 PM, call 112 or your local police control room immediately.",
+      "File a written complaint with the Sub-Divisional Magistrate (SDM) for recurring nuisance.",
+      "SDM has the power to issue an order for immediate removal or cessation of the nuisance.",
+      "If it relates to an illegal structure, complain to the local Municipal Corporation."
+    ],
+    "proof_required": [
+      "Video/Audio recordings",
+      "Written complaints from multiple neighbors",
+      "Photos of illegal structure"
+    ],
+    "authority": "Sub-Divisional Magistrate (SDM) & Police Control Room",
+    "risk": "Medium - Relies on local enforcement; SDM orders are fast but require follow-up."
+  },
+  {
+    "keywords": [
+      "cheque bounce",
+      "bounced cheque",
+      "insufficient funds",
+      "check bounce",
+      "138 case",
+      "cheque return memo"
+    ],
+    "issue": "Cheque Bounce (Section 138)",
+    "category": "Financial/Criminal",
+    "severity": "High",
+    "description": "When a cheque is returned unpaid due to insufficient funds or other technical reasons.",
+    "laws": [
+      {
+        "act": "Negotiable Instruments Act, 1881",
+        "sections": [
+          "Section 138"
+        ]
+      }
+    ],
+    "steps": [
+      "Send a Legal Notice within 30 days of receiving the return memo.",
+      "Give the issuer 15 days to pay the amount from the date of receiving the notice.",
+      "If they fail to pay, file a criminal complaint in court within 30 days after the notice period ends.",
+      "Strict adherence to these timelines is mandatory to keep the criminal case alive."
+    ],
+    "proof_required": [
+      "Original Cheque",
+      "Bank Return Memo",
+      "Legal Notice copy",
+      "Postal tracking report"
+    ],
+    "authority": "Judicial Magistrate Court",
+    "risk": "High - Strict timelines; criminal liability for the issuer (up to 2 years jail)."
+  },
+  {
+    "keywords": [
+      "freelancer not paid",
+      "client not paying",
+      "payment delayed",
+      "contract breach",
+      "work done no money"
+    ],
+    "issue": "Freelancer/Contractor Payment Dispute",
+    "category": "Employment/Civil",
+    "severity": "Medium",
+    "description": "Recovery of unpaid dues for services provided under a freelance or independent contract.",
+    "laws": [
+      {
+        "act": "Indian Contract Act, 1872",
+        "sections": [
+          "Section 73"
+        ]
+      },
+      {
+        "act": "Civil Procedure Code, 1908",
+        "sections": [
+          "Order 37 (Summary Suit)"
+        ]
+      }
+    ],
+    "steps": [
+      "Compile all email/WhatsApp trails proving the contract and work delivery.",
+      "Send a formal demand notice for payment via email and registered post.",
+      "If ignored, file a Summary Suit (Order 37) in Civil Court for faster recovery.",
+      "Consider MSME Samadhaan if you are registered as a Micro or Small enterprise."
+    ],
+    "proof_required": [
+      "Contract/Agreement",
+      "Invoices",
+      "Proof of delivery (Emails/Reports)",
+      "Communication trail"
+    ],
+    "authority": "Civil Court / MSME Council",
+    "risk": "Moderate - Recovery is certain if proof is strong, but court processes take time."
+  },
+  {
+    "keywords": [
+      "college marksheet",
+      "certificate retention",
+      "ugc fee refund",
+      "college fee refund",
+      "school fee refund",
+      "degree not giving"
+    ],
+    "issue": "College/School Refund & Certificate Issues",
+    "category": "Education",
+    "severity": "Medium",
+    "description": "Educational institutions withholding original certificates or refusing fee refunds on cancellation.",
+    "laws": [
+      {
+        "act": "UGC Guidelines",
+        "sections": [
+          "Retention of Original Certificates prohibited"
+        ]
+      },
+      {
+        "act": "UGC Fee Refund Policy",
+        "sections": [
+          "Timeline-based refunds"
+        ]
+      }
+    ],
+    "steps": [
+      "No institution can legally retain your original 10th/12th/Degree certificates to force payment.",
+      "For fee refunds, cite the UGC policy which mandates 80-100% refund depending on cancellation date.",
+      "Lodge a formal grievance on the UGC e-Samadhan portal (samadhan.ugc.ac.in).",
+      "Legal notice to the institution's head can often resolve the issue without court."
+    ],
+    "proof_required": [
+      "Admission receipt",
+      "Cancellation application copy",
+      "Letter of certificate retention"
+    ],
+    "authority": "UGC e-Samadhan Portal & Consumer Court",
+    "risk": "Low - UGC rules are absolute; institutions risk de-recognition for non-compliance."
+  },
+  {
+    "keywords": [
+      "msme delay",
+      "msme samadhaan",
+      "vendor payment",
+      "45 days payment",
+      "business payment stuck"
+    ],
+    "issue": "MSME Delayed Payments (Section 43B)",
+    "category": "Business",
+    "severity": "High",
+    "description": "Recovery for small business owners where buyers delay payment beyond 45 days.",
+    "laws": [
+      {
+        "act": "MSMED Act, 2006",
+        "sections": [
+          "Section 15",
+          "Section 16"
+        ]
+      },
+      {
+        "act": "Income Tax Act",
+        "sections": [
+          "Section 43B(h)"
+        ]
+      }
+    ],
+    "steps": [
+      "Buyer must pay within 45 days (if agreement exists) or 15 days (if no agreement).",
+      "Failure to pay leads to compound interest at 3x the RBI rate.",
+      "File a case on the MSME Samadhaan portal online.",
+      "Under Income Tax Section 43B(h), the buyer can't claim your invoice as an expense until they pay."
+    ],
+    "proof_required": [
+      "Udyam Registration",
+      "Invoice with MSME status declared",
+      "Purchase Order",
+      "Proof of delivery"
+    ],
+    "authority": "MSME Facilitation Council",
+    "risk": "High - Samadhaan portal is very effective for B2B recovery."
+  },
+  {
+    "keywords": [
+      "flight cancel",
+      "flight delay",
+      "dgca compensation",
+      "airline refund",
+      "ticket refund"
+    ],
+    "issue": "Flight Delay & Cancellation Rights",
+    "category": "Consumer/Travel",
+    "severity": "Low",
+    "description": "Compensation rights for airline passengers when flights are delayed, cancelled, or boarding is denied.",
+    "laws": [
+      {
+        "act": "Civil Aviation Requirements (DGCA)",
+        "sections": [
+          "CAR Section 3, Series M, Part IV"
+        ]
+      }
+    ],
+    "steps": [
+      "For delays >2 hours, free meals and refreshments are mandatory.",
+      "For cancellations without 24h notice, airline must offer alternate flight or refund + compensation (up to \u20b910k).",
+      "If denied boarding (overbooking), claim compensation up to 4x ticket price (Max \u20b920k).",
+      "Lodge grievances on the AirSewa portal for fast resolution."
+    ],
+    "proof_required": [
+      "Boarding pass",
+      "Ticket copy",
+      "Airline communication regarding delay/cancel"
+    ],
+    "authority": "AirSewa Portal (Ministry of Civil Aviation)",
+    "risk": "Low - DGCA rules are strict; airlines usually comply when reported via AirSewa."
+  },
+  {
+    "keywords": [
+      "stray dog bite",
+      "dog menace",
+      "rwa pet ban",
+      "animal cruelty",
+      "street dog management"
+    ],
+    "issue": "Stray Dog Rights & Management",
+    "category": "Civic/Animals",
+    "severity": "Medium",
+    "description": "Guidelines on managing stray dogs and resolving conflicts in residential areas.",
+    "laws": [
+      {
+        "act": "Animal Birth Control Rules, 2023",
+        "sections": [
+          "Sterilization only"
+        ]
+      },
+      {
+        "act": "Prevention of Cruelty to Animals Act, 1960",
+        "sections": [
+          "Section 11"
+        ]
+      }
+    ],
+    "steps": [
+      "It is illegal for RWAs or municipalities to relocate or kill stray dogs.",
+      "Dogs must be caught only for sterilization and returned to the same spot.",
+      "In case of dog bite, the municipality is liable for failure in sterilization programs; seek medical help first.",
+      "RWAs cannot stop residents from keeping pets or feeding strays in designated spots."
+    ],
+    "proof_required": [
+      "Medical report (for bite)",
+      "Video of cruelty or illegal relocation"
+    ],
+    "authority": "Municipal Corporation & Animal Welfare Board",
+    "risk": "Low - High legal protection for animals, but ground-level management varies."
+  },
+  {
+    "keywords": [
+      "ancestral property",
+      "partition",
+      "inheritance",
+      "daughter property right",
+      "family land dispute"
+    ],
+    "issue": "Ancestral Property Partition",
+    "category": "Property/Family",
+    "severity": "High",
+    "description": "Division of shared ancestral property among legal heirs.",
+    "laws": [
+      {
+        "act": "Hindu Succession Act, 1956",
+        "sections": [
+          "Section 6 (Equal rights for daughters)"
+        ]
+      }
+    ],
+    "steps": [
+      "Obtain a Legal Heir Certificate from the Tehsildar.",
+      "Send a formal partition notice to all co-owners.",
+      "If mediation fails, file a Partition Suit in Civil Court.",
+      "Daughters have absolute equal rights in ancestral property as sons since 2005."
+    ],
+    "proof_required": [
+      "Property registry/papers",
+      "Pedigree chart (Family tree)",
+      "Legal Heir Certificate"
+    ],
+    "authority": "Civil Court",
+    "risk": "Very High - Civil land disputes can take decades in India."
+  },
+  {
+    "keywords": [
+      "privacy breach",
+      "data leak",
+      "personal info leaked",
+      "online privacy",
+      "data चोरी",
+      "photo leak"
+    ],
+    "issue": "Data Privacy & Information Breach",
+    "category": "Cyber Crime",
+    "severity": "Medium",
+    "description": "Unauthorized access, leak, or misuse of personal sensitive data provided to an entity.",
+    "laws": [
+      {
+        "act": "Information Technology Act, 2000",
+        "sections": [
+          "Section 43A (Compensation for failure to protect data)",
+          "Section 72 (Penalty for breach of confidentiality)"
+        ]
+      },
+      {
+        "act": "Digital Personal Data Protection (DPDP) Act, 2023",
+        "sections": [
+          "Section 8 (Data Fiduciary obligations)"
+        ]
+      }
+    ],
+    "steps": [
+      "Report the leak to the company's Data Protection Officer (DPO) immediately.",
+      "File a complaint on the National Cyber Crime Reporting Portal (cybercrime.gov.in).",
+      "For financial impact, inform your bank and block accounts if necessary.",
+      "If the entity is a major corporation, you can seek compensation under IT Act Section 43A."
+    ],
+    "proof_required": [
+      "Screenshots of the leak",
+      "Notification from the company about the breach",
+      "Proof of identity theft (if applicable)"
+    ],
+    "authority": "Cyber Police / CERT-In / Data Protection Board",
+    "risk": "Medium - Proving specific damages can be technical."
+  },
+  {
+    "keywords": [
+      "child labour",
+      "baccho se kaam",
+      "chhota bacha kaam",
+      "underage worker",
+      "exploitation of children"
+    ],
+    "issue": "Child Labour & Exploitation",
+    "category": "Social/Criminal",
+    "severity": "Critical",
+    "description": "Employment of children under 14 in any occupation or adolescents (14-18) in hazardous occupations.",
+    "laws": [
+      {
+        "act": "Child Labour (Prohibition and Regulation) Act, 1986",
+        "sections": [
+          "Section 3 (Prohibition of employment)"
+        ]
+      },
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 143 (Trafficking of child)"
+        ]
+      }
+    ],
+    "steps": [
+      "Call Childline 1098 immediately (24/7 toll-free).",
+      "Inform the local Police or the District Magistrate (DM).",
+      "Provide the exact location where the child is being forced to work.",
+      "Inform a local Child Rights NGO (like Bachpan Bachao Andolan)."
+    ],
+    "proof_required": [
+      "Location of the child",
+      "Identity of the employer (if known)",
+      "Photos/Videos (only if safe to take)"
+    ],
+    "authority": "Childline 1098 / District Magistrate / Local Police",
+    "risk": "High - High urgency due to child safety risk."
   }
-]
+]
