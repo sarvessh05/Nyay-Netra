@@ -21,6 +21,16 @@ function App() {
   const hasMoved = useRef(false);
 
   useEffect(() => {
+    // Check if it's a touch device or small screen
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.innerWidth <= 1024;
+    
+    if (isTouch || isSmallScreen) {
+      if (auraRef.current) auraRef.current.style.display = 'none';
+      if (dotRef.current) dotRef.current.style.display = 'none';
+      return;
+    }
+
     const handleMouseMove = (e) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
       

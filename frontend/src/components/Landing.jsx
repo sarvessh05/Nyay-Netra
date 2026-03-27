@@ -82,16 +82,16 @@ const Landing = ({ onStartChat, setView }) => {
                   <div className="bubble no-bg">
                     Based on standard rental regulations, normal wear and tear is not a valid ground for withholding a deposit. Here is your structured analysis:
                   </div>
-                  <div className="demo-analysis-grid">
-                    <div className="analysis-card">
-                       <h4 className="secondary-text"><span className="material-symbols-outlined text-sm">balance</span> Legal Right</h4>
-                       <p>Section 14-B protects tenants from arbitrary deductions for routine depreciation.</p>
+                    <div className="demo-analysis-grid">
+                      <div className="analysis-card">
+                         <h4 className="text-secondary-accent"><span className="material-symbols-outlined text-sm">balance</span> Legal Right</h4>
+                         <p>Section 14-B protects tenants from arbitrary deductions for routine depreciation.</p>
+                      </div>
+                      <div className="analysis-card">
+                         <h4 className="text-primary-accent"><span className="material-symbols-outlined text-sm">near_me</span> Next Step</h4>
+                         <p>Send a formal 'Demand Notice' via registered post before pursuing small claims.</p>
+                      </div>
                     </div>
-                    <div className="analysis-card">
-                       <h4 className="primary-text"><span className="material-symbols-outlined text-sm">near_me</span> Next Step</h4>
-                       <p>Send a formal 'Demand Notice' via registered post before pursuing small claims.</p>
-                    </div>
-                  </div>
                   <div className="demo-actions">
                     <button className="btn-pill"><span className="material-symbols-outlined text-sm">description</span> Draft Demand Letter</button>
                     <button className="btn-pill"><span className="material-symbols-outlined text-sm">find_in_page</span> View Similar Cases</button>
@@ -119,8 +119,8 @@ const Landing = ({ onStartChat, setView }) => {
                 <div className="card-inner">
                   <h4>Trust Indicator</h4>
                   <div className="stat-row"><span>Groundwork</span><strong>Indian Constitution</strong></div>
-                  <div className="stat-row"><span>Knowledge Base</span><strong className="secondary-text">500+ Bare Acts</strong></div>
-                  <div className="stat-row"><span>Precedents</span><strong className="tertiary-text">1M+ Case Records</strong></div>
+                  <div className="stat-row"><span>Knowledge Base</span><strong className="text-secondary-accent">500+ Bare Acts</strong></div>
+                  <div className="stat-row"><span>Precedents</span><strong className="text-tertiary-accent">1M+ Case Records</strong></div>
                 </div>
              </div>
              <div className="image-card glass-panel">

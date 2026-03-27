@@ -10,6 +10,16 @@
   z-index: 50;
 }
 
+@media (max-width: 1024px) {
+  .analysis-panel {
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid rgba(64, 72, 93, 0.1);
+    padding: 1.5rem 1rem;
+  }
+}
+
 .panel-header {
   font-weight: 800;
   font-size: 0.7rem;
@@ -22,6 +32,12 @@
   gap: 0.75rem;
 }
 
+@media (max-width: 1024px) {
+  .panel-header {
+    margin-bottom: 1rem;
+  }
+}
+
 .analysis-main-card {
   background: #0f1930;
   border-radius: 1.5rem;
@@ -31,6 +47,13 @@
   overflow: hidden;
   margin-bottom: 2rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .analysis-main-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
 }
 
 /* Scanning Line Luxe */

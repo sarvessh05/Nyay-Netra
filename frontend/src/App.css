@@ -1,20 +1,20 @@
 .app-container {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--surface);
-  overflow: hidden;
   position: relative;
+  overflow-x: hidden;
 }
 
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow-y: auto;
+  min-height: 100vh;
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 
 .app-container.landing-mode .main-content {
@@ -24,8 +24,18 @@
 
 .chat-layout {
   display: flex;
-  height: 100%;
+  flex: 1;
   width: 100%;
-  overflow: hidden;
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .chat-layout {
+    flex-direction: column;
+    overflow-y: auto;
+  }
 }

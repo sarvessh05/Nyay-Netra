@@ -8,6 +8,13 @@
   overflow: hidden;
 }
 
+@media (max-width: 1024px) {
+  .chat-window {
+    height: auto;
+    min-height: 50vh;
+  }
+}
+
 .chat-header {
   height: 80px;
   padding: 0 2rem;
@@ -19,6 +26,13 @@
   align-items: center;
   z-index: 100;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .chat-header {
+    height: 60px;
+    padding: 0 1rem;
+  }
 }
 
 .header-info {
@@ -89,6 +103,13 @@
   flex-direction: column;
   gap: 2rem;
   scroll-behavior: smooth;
+}
+
+@media (max-width: 1024px) {
+  .chat-messages {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
 }
 
 .chat-empty-state {
@@ -207,6 +228,13 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 1024px) {
+  .message-bubble.user {
+    max-width: 90%;
+    padding: 1rem;
+  }
+}
+
 .message-bubble.assistant {
   background: #0f1930;
   border-radius: 1rem;
@@ -216,6 +244,13 @@
   max-width: 85%;
   margin-right: auto;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .message-bubble.assistant {
+    max-width: 95%;
+    padding: 1rem;
+  }
 }
 
 .ai-meta {
@@ -259,6 +294,12 @@
 .chat-input-wrapper {
   padding: 2rem;
   background: linear-gradient(0deg, var(--surface) 0%, transparent 100%);
+}
+
+@media (max-width: 1024px) {
+  .chat-input-wrapper {
+    padding: 1rem;
+  }
 }
 
 .input-glow-container {
