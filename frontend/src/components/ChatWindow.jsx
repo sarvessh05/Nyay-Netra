@@ -26,7 +26,9 @@ const ChatWindow = ({ onResponse }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/ask', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await axios.post(`${apiUrl}/api/ask`, {
+
         query: input,
         history: messages.map(m => ({ role: m.role, content: m.content }))
       });
