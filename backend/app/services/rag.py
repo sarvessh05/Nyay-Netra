@@ -13,16 +13,24 @@ def build_prompt(query: str, context: list, history: Optional[list] = None):
     
     # Format history if it exists
     history_text = ""
+    is_followup = False
     if history:
+        is_followup = True
         history_text = "\n### PREVIOUS CONVERSATION ###\n"
         for msg in history:
             role = "USER" if msg.role == "user" else "ASSISTANT"
             history_text += f"{role}: {msg.content}\n"
 
+    # Define intro instructions based on whether it is a follow-up
+    if not is_followup:
+        intro_instructions = 'If this is the FIRST message, acknowledge their problem with empathy (e.g., "I\'m sorry you\'re going through this, let\'s fix it together").'
+    else:
+        intro_instructions = 'This is a FOLLOW-UP query. Do NOT repeat the initial empathy or general introductions. Stay focused on the existing context.'
+
     prompt = f"""
     PERSONALITY: You are 'Nyaya Netra' (ਨਿਆਇ ਨੇਤਰ), a friendly and compassionate legal guardian for the common man in India. 
     Your tone must be reassuring, patient, and easy to understand. Avoid legal jargon where possible. 
-    If the user is stressed, acknowledge their problem with empathy (e.g., "I'm sorry you're going through this, let's fix it together").
+    {intro_instructions}
 
     ### CONTEXT FROM DATABASE ###
     {context_text}
@@ -34,16 +42,17 @@ def build_prompt(query: str, context: list, history: Optional[list] = None):
 
     ### RESPONSE GUIDELINES ###
     1. Helpfulness is 90% of your job. Be a friend first, a lawyer second.
-    2. Provide a definitive, actionable result in the first response.
+    2. Provide a definitive, actionable result. 
     3. CITE specific Sections/Acts clearly (BNS, BNSS, Consumer Act, etc.).
-    4. You MUST respond ONLY in valid JSON with this exact schema:
+    4. FOLLLOW-UP LOGIC: If the user asks "What should I do" or "Tell me more", refer back to the context in the PREVIOUS CONVERSATION and the provided DATABASE CONTEXT. Do NOT hallucinate new unrelated categories (like Cyber Crime if the problem is Theft).
+    5. You MUST respond ONLY in valid JSON with this exact schema:
     {{
-        "issue": "Identify the core problem",
-        "category": "Broad category",
+        "issue": "Identify the core problem (refer to history if current query is vague)",
+        "category": "Broad category (e.g., Criminal, Civil, Consumer)",
         "law_citation": "Exact Act/Sections",
-        "explanation": "FRIENDLY and thorough summary for a non-lawyer. This is your chance to talk to the user like a mentor. Reassure them, explain the 'why', and speak directly to their concern.",
+        "explanation": "FRIENDLY summary. If follow-up, answer the specific question while keeping the old context. Do NOT re-introduce yourself.",
         "action_plan": ["Specific Step 1", "Step 2", "..."],
-        "documents_needed": ["Proof A", "Document B", "..."],
+        "documents_needed": ["Proof A", ],
         "where_to_go": "Exact office or portal",
         "risk_and_timeline": "Realistic timeline and reassurance",
         "is_legal": true/false,
@@ -57,7 +66,8 @@ def process_query(query: str, history: Optional[list] = None):
     Coordinates the RAG pipeline with history support and friendly fallbacks.
     """
     start_retrieval = time.time()
-    context = retrieve_context(query)
+    # Pass history to retriever so it can maintain context for generic queries
+    context = retrieve_context(query, history)
     retrieval_time = time.time() - start_retrieval
     
     prompt = build_prompt(query, context, history)

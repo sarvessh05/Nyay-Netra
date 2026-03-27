@@ -10,7 +10,10 @@ async def health_check():
     """
     Returns the server health status.
     """
-    return {"status": "healthy", "service": "Nyay Netra Backend", "version": "1.0.1"}
+    return {
+        "status": "success",
+        "processed_at": "2024-03-24T12:00:00Z"
+    }
 
 @router.post("/ask", response_model=QueryResponse)
 @limiter.limit("5/minute")

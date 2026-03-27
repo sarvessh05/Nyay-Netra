@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>न्याय Netra | AI Legal Visionary</title>
+    <!-- Google Fonts & Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Background Gradient Cursor Effect -->
+    <div id="cursor-glow"></div>
+    <script>
+      const glow = document.getElementById('cursor-glow');
+      window.addEventListener('mousemove', (e) => {
+        if (glow) {
+          glow.style.left = e.clientX + 'px';
+          glow.style.top = e.clientY + 'px';
+        }
+      });
+    </script>
+    <style>
+      #cursor-glow {
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(138, 76, 252, 0.08) 0%, rgba(138, 76, 252, 0) 70%);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: -5;
+        transform: translate(-50%, -50%);
+        transition: left 0.15s ease-out, top 0.15s ease-out;
+      }
+    </style>
+  </body>
+</html>

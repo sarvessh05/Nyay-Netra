@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+  /* --- Color Palette (Cyber Ethereal - Refined) --- */
+  --surface: #060e20;
+  --surface-dim: #060e20;
+  --surface-bright: #1f2b49;
+  --surface-container-lowest: #000000;
+  --surface-container-low: #091328;
+  --surface-container: #0f1930;
+  --surface-container-high: #141f38;
+  --surface-container-highest: #192540;
+
+  --on-surface: #dee5ff;
+  --on-surface-variant: #a3aac4;
+
+  --primary: #bd9dff;
+  --primary-dim: #8a4cfc;
+  --primary-container: #b28cff;
+  --on-primary: #3c0089;
+
+  --secondary: #53ddfc;
+  --secondary-dim: #40ceed;
+  --secondary-container: #00687a;
+  --on-secondary: #004b58;
+
+  --tertiary: #d1c4ff;
+  --tertiary-dim: #b6a7ee;
+  --tertiary-container: #c3b4fc;
+
+  --error: #ff6e84;
+  --outline: #6d758c;
+  --outline-variant: #40485d;
+
+  /* --- Normalized Typography Scale --- */
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Plus Jakarta Sans', sans-serif;
+
+  /* --- Motion --- */
+  --transition-standard: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Radius --- */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /* --- Backdrop Blur --- */
+  --blur-glass: 24px;
+
+  /* --- Opacity Helpers --- */
+  --surface-80: rgba(6, 14, 32, 0.8);
+  --border-light: rgba(109, 117, 140, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  cursor: none !important; /* Hide real cursor globally */
+  background-color: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* --- Selection --- */
+::selection {
+  background: rgba(189, 157, 255, 0.3);
+  color: var(--on-surface);
+}
+
+/* --- Cursor Aura & Dot --- */
+.cursor-aura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, 
+    rgba(138, 76, 252, 0.15) 0%, 
+    rgba(83, 221, 252, 0.05) 30%, 
+    transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100000; /* Extremely high */
+  mix-blend-mode: screen;
+  will-change: transform;
+  transform: translate3d(-100%, -100%, 0); /* Initial hidden state */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--secondary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100001;
+  box-shadow: 0 0 15px var(--secondary), 0 0 5px #fff;
+  will-change: transform;
+  transform: translate3d(-100%, -100%, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Ensure interactive elements still show something if needed, but we use the custom cursor */
+a, button, input, textarea, [role="button"] {
+  cursor: none !important;
+}
+
+/* --- Glassmorphism --- */
+.glass-panel {
+  background: rgba(25, 37, 64, 0.4);
+  backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid rgba(109, 117, 140, 0.15);
+  transition: var(--transition-standard);
+}
+
+.glass-panel:hover {
+  background: rgba(25, 37, 64, 0.6);
+  border-color: rgba(138, 76, 252, 0.3);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--primary-dim), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 10px rgba(138, 76, 252, 0.2));
+}
+
+.label-accent {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--secondary);
+}
+
+/* --- Utility Classes --- */
+.text-glow {
+  text-shadow: 0 0 20px rgba(138, 76, 252, 0.4);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* --- Layout --- */
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(138, 76, 252, 0.08) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(83, 221, 252, 0.05) 0, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(6, 14, 32, 1) 0, transparent 100%);
+  background-attachment: fixed;
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Luxe Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #40485d; border-radius: 10px; }
+
+/* Luxe Animations */
+@keyframes pulse-glow-primary {
+  0%, 100% { box-shadow: 0 0 10px rgba(189, 157, 255, 0.1), inset 0 0 10px rgba(189, 157, 255, 0.05); }
+  50% { box-shadow: 0 0 25px rgba(189, 157, 255, 0.3), inset 0 0 15px rgba(189, 157, 255, 0.1); }
+}
+
+@keyframes pulse-glow-error {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 110, 132, 0.1), inset 0 0 10px rgba(255, 110, 132, 0.05); }
+  50% { box-shadow: 0 0 25px rgba(255, 110, 132, 0.2), inset 0 0 15px rgba(255, 110, 132, 0.1); }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+@keyframes bounce-smooth {
+  0% { transform: translateY(0); opacity: 0.4; }
+  100% { transform: translateY(-6px); opacity: 1; }
+}
+
+.animate-pulse-glow-primary { animation: pulse-glow-primary 4s infinite; }
+.animate-pulse-glow-error { animation: pulse-glow-error 3s infinite; }
+.animate-scan { animation: scan 3s linear infinite; }
+.animate-bounce-smooth { animation: bounce-smooth 0.6s infinite alternate; }
+

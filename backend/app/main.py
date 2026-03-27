@@ -11,8 +11,7 @@ import time
 
 app = FastAPI(
     title="Nyay Netra Backend API",
-    description="Advanced RAG-based Legal Assistant Engine",
-    version="1.0.1"
+    description="Advanced RAG-based Legal Assistant Engine"
 )
 
 # 🕒 Response Time Middleware
@@ -51,6 +50,5 @@ def read_root():
     return {
         "name": "Nyaya Netra API",
         "status": "Healthy and Operational",
-        "version": "1.0.0",
         "documentation": "/docs"
     }

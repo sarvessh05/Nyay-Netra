@@ -1119,5 +1119,53 @@
     ],
     "authority": "Childline 1098 / District Magistrate / Local Police",
     "risk": "High - High urgency due to child safety risk."
+  },
+  {
+    "keywords": [
+      "theft",
+      "car stolen",
+      "bike stolen",
+      "mobile stolen",
+      "chori",
+      "burglary",
+      "stolen property",
+      "purse stolen",
+      "chain snatching"
+    ],
+    "issue": "Theft, Burglary & Stolen Property",
+    "category": "Criminal",
+    "severity": "High",
+    "description": "Unauthorized taking of property belonging to another person with the intent to deprive them of it.",
+    "laws": [
+      {
+        "act": "Bharatiya Nyaya Sanhita, 2023",
+        "sections": [
+          "Section 303 (Theft)",
+          "Section 305 (Theft in dwelling house)",
+          "Section 307 (Theft after preparation made for causing death, hurt or restraint)"
+        ]
+      },
+      {
+        "act": "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+        "sections": [
+          "Section 173 (Registration of FIR)"
+        ]
+      }
+    ],
+    "steps": [
+      "Visit the nearest police station or use the state's e-FIR portal (for unknown accused) to file an FIR immediately.",
+      "For vehicle theft, provide the Registration Number, Engine Number, and Chassis Number.",
+      "Inform your insurance company within 24-48 hours of the incident to initiate the claim process.",
+      "Inform the RTO (Regional Transport Office) about the theft to prevent illegal transfer.",
+      "If the police do not find the property within 90 days, request a 'Final Report' or 'Untraced Report' from the court for insurance settlement."
+    ],
+    "proof_required": [
+      "Registration Certificate (RC) for vehicles",
+      "Invoice/Bill of the stolen item",
+      "Photographs or CCTV footage (if available)",
+      "Identity proof of the owner"
+    ],
+    "authority": "Local Police Station & Insurance Company",
+    "risk": "High - Recovery is difficult if the FIR is delayed or the property is dismantled/sold quickly."
   }
-]
+]
