@@ -28,5 +28,4 @@ def format_ai_response(raw_response):
         return data
         
     except json.JSONDecodeError:
-        print(f"Formatter Error: Could not parse AI response as JSON. Raw: {raw_response[:100]}...")
         return None

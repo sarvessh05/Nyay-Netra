@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import apiService from './api/apiService';
 import Sidebar from './components/Sidebar';
 import ChatWindow from './components/ChatWindow';
 import AnalysisPanel from './components/AnalysisPanel';
@@ -19,6 +20,11 @@ function App() {
   const auraPos = useRef({ x: 0, y: 0 });
 
   const hasMoved = useRef(false);
+  
+  // Background Wake-up Ping for Render Cold Start
+  useEffect(() => {
+    apiService.wakeupBackend();
+  }, []);
 
   useEffect(() => {
     // Check if it's a touch device or small screen

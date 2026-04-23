@@ -21,7 +21,6 @@ async def add_process_time_header(request, call_next):
     response = await call_next(request)
     process_time = time.time() - start_time
     response.headers["X-Process-Time"] = str(process_time)
-    print(f"DEBUG: Request to {request.url.path} took {process_time:.4f}s")
     return response
 
 # Add Rate Limiter to app state
@@ -52,3 +51,10 @@ def read_root():
         "status": "Healthy and Operational",
         "documentation": "/docs"
     }
+
+@app.get("/health")
+def health_check():
+    """
+    Lightweight health check for frontend to wake up the backend.
+    """
+    return {"status": "ok"}

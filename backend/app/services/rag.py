@@ -77,7 +77,6 @@ def process_query(query: str, history: Optional[list] = None):
     model_name = "Gemini 1.5 Flash"
     
     if not response:
-        print("Gemini failed. Falling back to Groq...")
         response = call_groq(prompt)
         model_name = "Groq / Llama 3.3"
         
@@ -89,7 +88,6 @@ def process_query(query: str, history: Optional[list] = None):
             formatted_response["model_used"] = model_name
             formatted_response["disclaimer"] = "Disclaimer: Nyaya Netra provides AI-generated legal info for educational purposes. Always consult a lawyer."
             
-            print(f"Metrics: Retrieval: {retrieval_time:.3f}s | AI: {ai_time:.3f}s")
             return formatted_response
         
     # Safety fallback

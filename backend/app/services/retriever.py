@@ -11,7 +11,6 @@ def retrieve_context(query: str, history: Optional[List] = None):
         with open(DATA_PATH, "r", encoding="utf-8") as f:
             laws = json.load(f)
     except Exception as e:
-        print(f"Error loading laws: {e}")
         return []
 
     # Aggregate query words from current query and last user query if history exists

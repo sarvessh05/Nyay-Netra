@@ -36,5 +36,4 @@ async def ask_legal_query(request: Request, payload: QueryRequest):
     except HTTPException:
         raise
     except Exception as e:
-        print(f"API Route Error: {e}")
         raise HTTPException(status_code=500, detail="An internal server error occurred.")

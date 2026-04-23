@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import apiService from '../api/apiService';
 import './ChatWindow.css';
 
 const ChatWindow = ({ onResponse }) => {
@@ -26,14 +26,7 @@ const ChatWindow = ({ onResponse }) => {
     setLoading(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-      const response = await axios.post(`${apiUrl}/api/ask`, {
-
-        query: input,
-        history: messages.map(m => ({ role: m.role, content: m.content }))
-      });
-
-      const data = response.data;
+      const data = await apiService.askLegalQuery(input, messages.map(m => ({ role: m.role, content: m.content })));
 
       // Extract details for the Side Panel (Analytical View)
       const analysisData = {
@@ -54,7 +47,6 @@ const ChatWindow = ({ onResponse }) => {
       // Pass the analytical part (structured data) to parent for side panel
       if (onResponse) onResponse(analysisData);
     } catch (err) {
-      console.error(err);
       setMessages(prev => [...prev, { 
         role: "assistant", 
         content: "I'm having trouble connecting to the legal database right now. Please try again soon." 
